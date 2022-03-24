@@ -29,7 +29,9 @@ export function StockPolicy() {
 
   useEffect(() => {
     setLoading(true)
-    getOneStockPolicy('/api/stockPolicies').then(response => setStockPolicy(response)).catch(error => setError(error))
+    getOneStockPolicy('/api/stockPolicies').then(response => {
+      setStockPolicy(response)
+    }).catch(error => setError(error))
     setLoading(false)
   }, [])
   
@@ -77,26 +79,27 @@ export function StockPolicy() {
             <tbody>
               <tr>
               {
-                error ? <p>{error}</p> : 
                 stockPolicy ? (
                   <>
                     <td>{`> ${stockPolicy.excellent}`}</td>
                     <td>{`de ${stockPolicy.critical} até ${stockPolicy.excellent}`}</td>
                     <td>{`< ${stockPolicy.critical}`}</td>
+                    <td>
+                      <button onClick={openUpdateIsOpen}>
+                        <Edit htmlColor=' #F35149'/>
+                      </button>
+                    </td>
                   </>
                 ) : (
                   <>
                     <td></td>
                     <td></td>
                     <td></td>
+                    <td></td>
                   </>
                 )
               }
-                <td>
-                  <button onClick={openUpdateIsOpen}>
-                    <Edit htmlColor=' #F35149'/>
-                  </button>
-                </td>
+                
               </tr>
               <tr></tr>
             </tbody>
