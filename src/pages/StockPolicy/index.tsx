@@ -40,7 +40,7 @@ export function StockPolicy() {
   }
   
   function closeModalCreate() {
-    setModalUpdateIsOpen(false)
+    setModalCreateIsOpen(false)
   }
 
   function openUpdateIsOpen() {
