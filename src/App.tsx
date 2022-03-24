@@ -11,11 +11,10 @@ export function App() {
     <>
     <Router>
         <Routes>
-          <Route path="/home" element={<Template home={Welcome}/>} />
+          <Route path="/" element={<Template home={Welcome}/>} />
           <Route path="/reports" element={<Template reportsComponent={Reports} />} />
           <Route path="/stockPolicies" element={<Template stockPolicy={StockPolicy}/>} />
           <Route path="/uploadFiles" element={<Template uploadFile={UploadFiles} />} />
-          <Route path="/dev" element={<Template />} />
         </Routes>
       </Router>
       <GlobalStyle />

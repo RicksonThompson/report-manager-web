@@ -29,7 +29,7 @@ export const Template: React.FC<TemplateProps> = ({
         </Header>
         <Main>
           <MenuBar>
-            <Link to="/home"><Home htmlColor='#3F4042'/></Link>
+            <Link to="/"><Home htmlColor='#3F4042'/></Link>
             <Link to="/uploadFiles"><DriveFolderUploadIcon htmlColor='#3F4042'/></Link>
             <Link to="/reports"><Assignment htmlColor='#3F4042'/></Link>
             <Link to="/stockPolicies"><PolicyIcon htmlColor='#3F4042'/></Link>
